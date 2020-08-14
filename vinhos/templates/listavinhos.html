@@ -2,28 +2,14 @@
 {% load static %}
 {% block content %}
 {% include 'partials/navbar.html' %}
+        {% for chave, nomeVinho in nomeVinho.items %}
         <div class="card" style="width: 17.4rem;">
             <img class="card-img-top" src="{% static 'assets/img/vinhos/vinho-3.png' %}" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">Vinho Rapariga</h5>
+              <h5 class="card-title">{{nomeVinho}}</h5>
               <p class="card-text">Vinho Rapariga da Quinta Colheita Seleccionada Alentejo Branco.</p>
               <a href="#" class="btn btn-primary btn-m">Quero esse!</a>
             </div>
           </div>
-          <div class="card" style="width: 17.4rem;">
-            <img class="card-img-top" src="{% static 'assets/img/vinhos/vinho-3.png' %}" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Vinho Rapariga</h5>
-              <p class="card-text">Vinho Rapariga da Quinta Colheita Seleccionada Alentejo Branco.</p>
-              <a href="#" class="btn btn-primary btn-m">Quero esse!</a>
-            </div>
-          </div>
-          <div class="card" style="width: 17.4rem;">
-            <img class="card-img-top" src="{% static 'assets/img/vinhos/vinho-3.png' %}" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Vinho Rapariga</h5>
-              <p class="card-text">Vinho Rapariga da Quinta Colheita Seleccionada Alentejo Branco.</p>
-              <a href="#" class="btn btn-primary btn-m">Quero esse!</a>
-            </div>
-          </div>
+          {% endfor %}
 {% endblock %}
