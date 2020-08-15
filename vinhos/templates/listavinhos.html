@@ -2,6 +2,7 @@
 {% load static %}
 {% block content %}
 {% include 'partials/navbar.html' %}
+<h1 class="h1-vinho">Escolha o vinho que você deseja...</h1>
         {% for chave, nomeVinho in nomeVinho.items %}
         <div class="card" style="width: 17.4rem;">
             <img class="card-img-top" src="{% static 'assets/img/vinhos/vinho-3.png' %}" alt="Card image cap">
