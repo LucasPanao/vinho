@@ -3,14 +3,17 @@
 {% block content %}
 {% include 'partials/navbar.html' %}
 <h1 class="h1-vinho">Escolha o vinho que você deseja...</h1>
-        {% for chave, nomeVinho in nomeVinho.items %}
+        {% if vinhos %}
+        {% for vinhos in vinhos %}
         <div class="card" style="width: 17.4rem;">
-            <img class="card-img-top" src="{% static 'assets/img/vinhos/vinho-3.png' %}" alt="Card image cap">
+            <img class="card-img-top" src={{vinhos.imagemVinho.url}} alt="{{vinhos.imagemVinho.name}}">
             <div class="card-body">
-              <h5 class="card-title">{{nomeVinho}}</h5>
-              <p class="card-text">Vinho Rapariga da Quinta Colheita Seleccionada Alentejo Branco.</p>
+              <h5 class="card-title">{{vinhos.nomeVinho}}</h5>
+              <p class="card-text">{{vinhos.descVinho}}.</p>
               <a href="#" class="btn btn-primary btn-m">Quero esse!</a>
             </div>
           </div>
           {% endfor %}
+          {% else %}
+          {% endif %}
 {% endblock %}
