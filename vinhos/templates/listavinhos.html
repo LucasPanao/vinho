@@ -8,10 +8,8 @@
         <div class="card" style="width: 17.4rem;">
             <img class="card-img-top" src={{vinhos.imagem_vinho.url}} alt="{{vinhos.imagem_vinho.name}}">
             <div class="card-body">
-              <h5 class="card-title">{{vinhos.nome_vinho}}</h5>
+              <h5 class="card-title">{{vinhos.nome_vinho}} <img class="flag-mini" src="{% static 'assets/flags/' %}{{vinhos.pais_vinho}}.gif" width="40px" height="25px" alt="{{vinhos.paises_vinho_nomes}}"> </h5>
               <p class="card-text">{{vinhos.desc_vinho}}</p>
-              <p class="card-text">NOME DO PAIS: {{vinhos.paises_vinho_nomes}}</p>              
-              <p class="card-text">SIGLA DO PAIS: {{vinhos.pais_vinho}}</p>
               <p class="card-text">{{vinhos.produtor_vinho}}</p>
               <p class="card-text">{{vinhos.casta_vinho}}</p>
               <p class="card-text">{{vinhos.ano_vinho}}</p>
