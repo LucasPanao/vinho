@@ -27,7 +27,7 @@ class Vinhos(models.Model):
     )
 
     nome_vinho = models.CharField(max_length=200)
-    imagem_vinho = models.ImageField(upload_to='.')
+    imagem_vinho = models.ImageField(upload_to='bottles/%Y/%m/%d', blank=True)
     desc_vinho = models.TextField()
     pais_vinho = models.CharField(max_length=2, choices=PAISES_VINHO)
     produtor_vinho = models.CharField(max_length=200)
@@ -36,6 +36,7 @@ class Vinhos(models.Model):
     ano_vinho = models.PositiveIntegerField(default=current_year(), validators=[MinValueValidator(1600), max_value_current_year])
     data_cadastro = models.DateTimeField(default=datetime.datetime.now,blank=True)
     codigo_barras_vinho = models.CharField(max_length=100)
+    refrigerado = models.BooleanField(default=False)
 
     ## EXTRA FUNCTIONS
 
