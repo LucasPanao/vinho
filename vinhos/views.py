@@ -6,9 +6,18 @@ def index(request):
 
 def listavinhos(request):
 
-    vinhos = Vinhos.objects.order_by('-data_cadastro').filter(refrigerado=True)
+    vinhos = Vinhos.objects.order_by('-data_cadastro').all()
 
     dados = {
         'vinhos' : vinhos
     }
     return render(request,'listavinhos.html',dados)
+
+def listavinhosrefrigerados(request):
+
+    vinhos = Vinhos.objects.order_by('-data_cadastro').filter(refrigerado=True)
+
+    dados = {
+        'vinhos' : vinhos
+    }
+    return render(request,'listavinhosrefrigerados.html',dados)
