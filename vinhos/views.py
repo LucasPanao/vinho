@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404, get_object_or_404
 from .models import Vinhos
 
 def index(request):
@@ -21,3 +21,11 @@ def listavinhosrefrigerados(request):
         'vinhos' : vinhos
     }
     return render(request,'listavinhosrefrigerados.html',dados)
+
+def carrinhovinho(request, vinhos_id):
+    vinho = get_object_or_404(Vinhos, pk=vinhos_id)
+    vinho_a_exibir = {
+        'vinhos' : vinho
+    }
+
+    return render(request,'carrinhovinho.html',vinho_a_exibir)
