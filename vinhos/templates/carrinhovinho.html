@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<link href="{% static 'css/body-bg.css' %}" rel="stylesheet" />
 <div class="container">
     <div class="row">
         <div class="col">
@@ -20,11 +21,11 @@
             </div>
         </div>
         <div class="col" style="text-align: center;">
-            <h2>O que você deseja levar?</h2>
+            <h2 class="h1-vinho" >O que você deseja levar?</h2>
             <button type="button" class="btn btn-primary btn-lg btn-xl">Garrafa</button>
             <button type="button" class="btn btn-secondary btn-lg btn-xl">Taça</button>
             <div class="form-group">
-                <h3>Quantidade:</h3>
+                <h3 class="h1-vinho" >Quantidade:</h3>
                 <select class="form-control">
                     <option>1</option>
                     <option>2</option>
