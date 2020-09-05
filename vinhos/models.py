@@ -35,6 +35,7 @@ class Vinhos(models.Model):
     casta_vinho = models.CharField(max_length=200)
     ano_vinho = models.PositiveIntegerField(default=current_year(), validators=[MinValueValidator(1600), max_value_current_year])
     data_cadastro = models.DateTimeField(default=datetime.datetime.now,blank=True)
+    preco_vinho = models.DecimalField(max_digits=8, decimal_places=2)
     codigo_barras_vinho = models.CharField(max_length=100)
     refrigerado = models.BooleanField(default=False)
 
