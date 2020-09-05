@@ -3,20 +3,31 @@
 {% block content %}
 <link href="{% static 'css/body-bg.css' %}" rel="stylesheet" />
 <h1 class="h1-vinho">Escolha o vinho que você deseja...</h1>
-        {% if vinhos %}
-        {% for vinhos in vinhos %}
-        <div class="card" style="width: 17.4rem;">
-            <img class="card-img-top" src={{vinhos.imagem_vinho.url}} alt="{{vinhos.imagem_vinho.name}}">
-            <div class="card-body">
-              <h5 class="card-title">{{vinhos.nome_vinho}} <img class="flag-mini" src="{% static 'assets/flags/' %}{{vinhos.pais_vinho}}.gif" width="40px" height="25px" alt="{{vinhos.paises_vinho_nomes}}"> </h5>
-              <p class="card-text">{{vinhos.desc_vinho}}</p>
-              <p class="card-text">{{vinhos.tipo_vinho}}</p>
-              <p class="card-text">{{vinhos.casta_vinho}}</p>
-              <p class="card-text">{{vinhos.ano_vinho}}</p>
-              <a href="{% url 'carrinhovinho' vinhos.id %}" class="btn btn-primary btn-m">Quero esse!</a>
-            </div>
-          </div>
-          {% endfor %}
-          {% else %}
-          {% endif %}
+<ul class="filters text-center">
+  <li class="active" data-filter="*"><a href="#!">Todos</a></li>
+  <li data-filter=".BR"><a href="#!">Brasil</a></li>
+  <li data-filter=".CL"><a href="#!">Chile</a></li>
+  <li data-filter=".AR"><a href="#!">Argentina</a></li>
+  <li data-filter=".DE"><a href="#!">Alemanha</a></li>
+</ul>
+<div class="filtrar-vinho-pais">
+  {% if vinhos %}
+  {% for vinhos in vinhos %}
+  <div class="card item {{vinhos.pais_vinho}}" style="width: 17.2rem;">
+    <img class="card-img-top" src={{vinhos.imagem_vinho.url}} alt="{{vinhos.imagem_vinho.name}}">
+    <div class="card-body">
+      <h5 class="card-title">{{vinhos.nome_vinho}} <img class="flag-mini"
+          src="{% static 'assets/flags/' %}{{vinhos.pais_vinho}}.gif" width="40px" height="25px"
+          alt="{{vinhos.paises_vinho_nomes}}"> </h5>
+      <p class="card-text">{{vinhos.desc_vinho}}</p>
+      <p class="card-text">{{vinhos.tipo_vinho}}</p>
+      <p class="card-text">{{vinhos.casta_vinho}}</p>
+      <p class="card-text">{{vinhos.ano_vinho}}</p>
+      <a href="{% url 'carrinhovinho' vinhos.id %}" class="btn btn-primary btn-m">Quero esse!</a>
+    </div>
+  </div>
+{% endfor %}
+{% else %}
+{% endif %}
+</div>
 {% endblock %}
