@@ -47,8 +47,12 @@
                     <span class="input-group-text">{{vinhos.preco_vinho|div:3|floatformat:"0"}}</span>
                 </div>
             </div>
-            <button type="button" class="btn btn-primary btn-lg btn-block">Imprimir cupom</button>
+            <!-- VARIAVEIS DE IMPRESSÃO -->
+            {{vinhos.nome_vinho | json_script:"nome"}}
+            {{vinhos.preco_vinho | json_script:"valor"}}
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="printIt()">Imprimir cupom</button>
         </div>
     </div>
 </div>
+<script src="{% static 'js/imprimir.js' %}"></script>
 {% endblock %}
