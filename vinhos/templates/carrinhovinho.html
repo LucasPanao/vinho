@@ -6,53 +6,56 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="{{vinhos.imagem_vinho.url}}" class="card-img" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">{{vinhos.nome_vinho}}</h5>
-                            <p class="card-text">{{vinhos.desc_vinho}} </p>
-                            <p class="card-text"><small class="text-muted">Feito e produzido no: {{vinhos.paises_vinho_nomes}}</small></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-4">
+                <img src="{{vinhos.imagem_vinho.url}}" class="card-img carrinho-img" alt="...">
             </div>
         </div>
-        <div class="col" style="text-align: center;">
-            <h2 class="h1-vinho" >O que você deseja levar?</h2>
-            <button type="button" class="btn btn-primary btn-lg btn-xl">Garrafa</button>
-            <button type="button" class="btn btn-secondary btn-lg btn-xl">Taça</button>
-            <div class="form-group">
-                <h3 class="h1-vinho" >Quantidade:</h3>
-                <select class="form-control">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
+        <div class="col">
+            <div class="card-body carrinho-text-box">
+                <h5 class="card-title">{{vinhos.nome_vinho}}</h5>
+                <p class="card-text">{{vinhos.desc_vinho}} </p>
+                <p class="card-text">Tipo: {{vinhos.tipo_vinho}} </p>
+                <p class="card-text">Casta: {{vinhos.casta_vinho}} </p>
+                <p class="card-text"><small class="text-muted">Feito e produzido: {{vinhos.paises_vinho_nomes}}</small></p>
             </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <h3 class="h1-vinho" >Valor:</h3>
-                    <span class="input-group-text">$</span>
-                    <span class="input-group-text">{{vinhos.preco_vinho}}</span>
-                </div>
-                <div class="input-group-prepend">
-                    <h3 class="h1-vinho" >Valor Taça:</h3>
-                    <span class="input-group-text">$</span>
-                    <span class="input-group-text">{{vinhos.preco_vinho|div:3|floatformat:"0"}}</span>
-                </div>
-            </div>
-            <!-- VARIAVEIS DE IMPRESSÃO -->
-            {{vinhos.nome_vinho | json_script:"nome"}}
-            {{vinhos.preco_vinho | json_script:"valor"}}
-            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="printIt()">Imprimir cupom</button>
         </div>
     </div>
+    <div class="col" style="text-align: center;">
+        <h2 class="h1-vinho carrinho-text">O que você deseja levar?</h2>
+        <button type="button" class="btn btn-primary btn-lg btn-xl">Garrafa</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-xl">Taça</button>
+        <div class="form-group">
+            <h3 class="h1-vinho carrinho-text">Quantidade:</h3>
+            <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="input-group mb-3 carrinho-text">
+            <div class="input-group-prepend">
+                <h3 class="h1-vinho">Valor:</h3>
+                <span class="input-group-text">$</span>
+                <span class="input-group-text">{{vinhos.preco_vinho}}</span>
+            </div>
+        </div>
+        <div class="input-group mb-3 carrinho-text">
+            <div class="input-group-prepend">
+                <h3 class="h1-vinho">Valor Taça:</h3>
+                <span class="input-group-text">$</span>
+                <span class="input-group-text">{{vinhos.preco_vinho|div:3|floatformat:"0"}}</span>
+            </div>
+        </div>
+        <!-- VARIAVEIS DE IMPRESSÃO -->
+        {{vinhos.nome_vinho | json_script:"nome"}}
+        {{vinhos.preco_vinho | json_script:"valor"}}
+        <div class="carrinho-text" >
+            <button type="button" class="btn btn-primary btn-xl btn-block " onclick="printIt()">Imprimir cupom</button>
+        </div>
+    </div>
+</div>
 </div>
 <script src="{% static 'js/imprimir.js' %}"></script>
 {% endblock %}
