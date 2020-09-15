@@ -4,6 +4,9 @@ from .models import Vinhos
 def index(request):
     return render(request,'index.html')
 
+def garrafaoutaca(request):
+    return render(request,'garrafaoutaca.html')
+
 def listavinhos(request):
 
     vinhos = Vinhos.objects.order_by('-data_cadastro').all()
