@@ -7,9 +7,10 @@
     <img src="{% static 'assets/img/vinhos/wine-glasses.png' %}" width="300px" alt="">
     <div class="container">
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'listavinhosrefrigerados' %}">Somente vinhos em taça</a>
-        <div class="masthead-subheading">ou</div>
+        <div style="margin-top: 40px;"><h1 class="h1-vinho">OU</h1></div>
         <img src="{% static 'assets/img/vinhos/multi-wines-2.webp' %}" width="300px" alt="">
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" style="padding-top: 20px;" href="{% url 'listavinhos' %}">Exibir todos os rótulos</a>
     </div>
 </header>
+{% include 'partials/footer-buttom.html' %}
 {% endblock %}

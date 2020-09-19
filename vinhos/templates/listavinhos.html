@@ -19,7 +19,6 @@
       <h5 class="card-title">{{vinhos.nome_vinho}} <img class="flag-mini"
           src="{% static 'assets/flags/' %}{{vinhos.pais_vinho}}.gif" width="40px" height="25px"
           alt="{{vinhos.paises_vinho_nomes}}"> </h5>
-      <p class="card-text">{{vinhos.desc_vinho}}</p>
       <p class="card-text">{{vinhos.tipo_vinho}}</p>
       <p class="card-text">{{vinhos.casta_vinho}}</p>
       <p class="card-text">{{vinhos.ano_vinho}}</p>
@@ -30,5 +29,5 @@
 {% else %}
 {% endif %}
 </div>
-<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" style="width: 100%; background-color: tomato;" href="{% url 'garrafaoutaca' %}">VOLTAR A PÁGINA INICIAL</a>
+{% include 'partials/footer-buttom.html' %}
 {% endblock %}
