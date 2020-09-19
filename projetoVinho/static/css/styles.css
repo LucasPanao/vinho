@@ -10592,3 +10592,11 @@ ul.filters > li.active > a{
   width: 100%;
   height: 140px;
 }
+
+.footer-area-carrinho {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 140px;
+  bottom: 0;
+}

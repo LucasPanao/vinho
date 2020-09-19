@@ -58,5 +58,7 @@
 </div>
 </div>
 <script src="{% static 'js/imprimir.js' %}"></script>
-{% include 'partials/footer-buttom.html' %}
+<footer class="footer-area-carrinho">
+    <a class="btn btn-primary btn-xl text-uppercase footer-tela-inicial" href="{% url 'index' %}">VOLTAR A PÁGINA INICIAL</a>
+</footer>
 {% endblock %}
