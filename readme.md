@@ -51,7 +51,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <p>
-<img src="https://lh3.googleusercontent.com/PTPoH-CRNnbuJnsNOsxiKiKdgCVSMhhexc-n2I2QIGIKXFaROIjOmM7QwVRs9L49kqSKGolWy_YQBlHsd3fZWwBIZzUzxvpzGn2OhxEmJCA8wSyTiqATeN1H1OtoVEftWYDE5zVUg7a2PrATFWedDCnUYLNSqZIlGfrmXT4WkjorQ40PMrd8C5H-PKtHDZDSVZEtOic5hUwq2z95AhOZIicMk67mgTHvkweKd7tsUFDaID_kcb_rxohsbSdUPakcQ71ZjyAR_wZry6spHyncZ7-J38qxHp-YRUr2jroYg5qNCYE0cLCzWq14hvr3VuCnFdsM6xuqCiVpVvVQg1JpRDqajF0mPIrDVWC-l3BSD6j4cH-J3T0eSGsa9bXjUFpDjNQEetz_kwulR_FJROV9VdAH7ZBgkChd5kgxN3wktBtgVm-eIcegcjoNuXwmoBgCDOyJDrMJMGTXRFUEPhbUyw8qhk9T6XvzY2Ee5esKI9Qal15BngW7j0meA0-1dC6tzvJSMq8IyqeyYcHOPmZiSvSYhTB90UXijdSXIPu4-a15NiR8gRpyJrgr2NLpRCGg6twq0g8CnRPDk80XpS_7cQGed5R5b8MydMgRhDvdDUNh3QjVARpRcsVE1xcX50nizulvwvJp4V1TGY5q_3hVn0i5xcP6GbKZ3WTf8V7m_r7WWF_1Jcs4IsDf5PUYxfBt6pia_LDuYXU5KjNuMagJpWQNvA=w490-h903-no?authuser=1" alt="Home Screen" align="center">
+<img src="projetoVinho\static\assets\img\prints\tela-inicial.png" alt="Home Screen">
 </p>
 
 This project was an application created for a wine store in Santos / SP - Brazil, with the aim of making it easier for customers to choose wines through their different countries, flavors and vintages.
@@ -72,6 +72,16 @@ The Application is made entirely using Django, so it is possible to use django-a
 
 <!-- GETTING STARTED -->
 ## Getting Started
+
+<p>On this screen it is possible to choose how you will take your wine if it is to be taken on the spot or to take home.</p>
+<img src="projetoVinho\static\assets\img\prints\tela-2.png" alt="How take your wine">
+
+<p>On this screen it is possible to choose which wine you will take and filter by the country in which it was produced.</p>
+<img src="projetoVinho\static\assets\img\prints\tela-3.png" alt="Which wine">
+
+<p>
+This is the last screen where the user will choose the amount of wine and print the purchase coupon.</p>
+<img src="projetoVinho\static\assets\img\prints\tela-4.png" alt="Which wine">
 
 ### Prerequisites
 
